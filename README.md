@@ -19,6 +19,5 @@ This way ```tokenizer``` is set to either GPT2, CUSTOM, etc...
 3.  
 
 ## TODO
-1. Copy RUGPT3XL ```vocab.json``` and ```merges.txt``` on Google drive, so you can access them from Colab.
-2. Make ```RUGPT3XL_finetune_ILM_example.ipynb``` file to test ilm training 
+
 
