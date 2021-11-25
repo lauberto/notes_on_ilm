@@ -11,6 +11,7 @@ This way ```tokenizer``` is set to either GPT2, CUSTOM, etc...
 5. The encoder (tokenizer) is loaded from the ```OFFICIAL_GPT2_ENCODER_DIR```, which contains ```encoder.json``` (a tokoen to id dictionary), and ```vocab.bpe``` (a file containing the most frequent merges of the tokenizer) 
     * rugpt3xl utilizes a tokenizer which is also based on these files, however they are called respectively ```vocab.json``` and ```merges.txt```
 6. Train and eval data are loaded.
+7. To compute logits, the model is called on a tensor of **token_ids**. For this reason, the model does not need an embodied tokenizer, as it is in the rugpt3xl original repo. They embody the tokenizer into the model, so that they can generate new text, based on an input text that needs to be tokenized. This is not out case, so maybe we can just remove the tokenizer from the ```RuGPT3XL``` class object. 
 
 ## RUGPT3MODEL INITIALIZATION
 1. Tokenizer must be intialized the ilm way, i.e. using the encoder module
